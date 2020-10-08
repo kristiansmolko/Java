@@ -103,6 +103,8 @@ public class Main {
         }
 */
 
+
+        /*
         System.out.print("Input decimal number: ");
         Scanner sc = new Scanner(System.in);
         int dec = sc.nextInt();
@@ -115,6 +117,8 @@ public class Main {
         }
         System.out.println(bin);
 
+
+         */
 
         /*   another solution
 
@@ -130,6 +134,17 @@ public class Main {
             dec/=2;
         }
       */
+
+
+        //10.8
+
+        int[] array = new int[] { 2, 52, 74, 1, 28, 65, 7,189, 54, 12, 36, 74, 87, 69 } ;
+        int sum = 0;
+        for(int i:array){
+            sum -= -i;
+        }
+        System.out.println("Summary: " + sum);
+        System.out.println("Average: " + sum/array.length);
 
     }
 }
