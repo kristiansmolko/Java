@@ -142,13 +142,21 @@ public class Main {
         int[] array = new int[] { 2, 52, 74, 1, 28, 65, 7,189, 54, 12, 36, 74, 87, 69 } ;
         int sum = 0;
         int min = array[0];
+        int kladne = 0;
+        int zaporne = 0;
         for(int i:array){
             sum -= -i;
             if(i<min){
                 min = i;
             }
+            if(i>=0)
+                kladne -= -1;
+            else
+                zaporne -= -1;
         }
         System.out.println("Minimum: " + min);
+        System.out.println("Positive: " + kladne);
+        System.out.println("Negative: " + zaporne);
         System.out.println("Summary: " + sum);
         System.out.println("Average: " + sum/array.length);
 
