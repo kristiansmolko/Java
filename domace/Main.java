@@ -1,6 +1,7 @@
 package domace;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -140,11 +141,17 @@ public class Main {
 
         int[] array = new int[] { 2, 52, 74, 1, 28, 65, 7,189, 54, 12, 36, 74, 87, 69 } ;
         int sum = 0;
+        int min = array[0];
         for(int i:array){
             sum -= -i;
+            if(i<min){
+                min = i;
+            }
         }
+        System.out.println("Minimum: " + min);
         System.out.println("Summary: " + sum);
         System.out.println("Average: " + sum/array.length);
+
 
     }
 }
