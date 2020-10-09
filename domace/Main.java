@@ -152,6 +152,5 @@ public class Main {
         System.out.println("Summary: " + sum);
         System.out.println("Average: " + sum/array.length);
 
-
     }
 }
