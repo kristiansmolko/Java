@@ -10,8 +10,7 @@ public class ConvertTask extends Convert{
         int dec = sc.nextInt();
         Convert cv = new Convert();
 
-        while(dec<0){
-            System.out.println();
+        while(dec<=0){
             System.out.print("\033[31mTry again: \033[0m");
             dec = sc.nextInt();
         }
@@ -19,11 +18,11 @@ public class ConvertTask extends Convert{
         System.out.print("Sustava: ");
         int n = sc.nextInt();
 
-        while(n!=0) {
+        while(n!=2 || n!=8 || n!=16) {
             if (n == 2 || n == 8 || n == 16) {
                 break;
             }
-            System.out.println("\033[31mTry again!\033[0m");
+            System.out.print("\033[31mTry again: \033[0m");
             n = sc.nextInt();
         }
 
