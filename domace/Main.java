@@ -136,7 +136,7 @@ public class Main {
         //10.8
 
 
-        /*
+
         int[] array = new int[] { 2, 52, 74, 1, 28, 65, 7,189, 54, 12, 36, 74, 87, 69 } ;
         int sum = 0;
         int min = array[0];
@@ -163,8 +163,6 @@ public class Main {
             revarray[i] = array[(array.length-1)-i];
             System.out.print(revarray[i] + ", ");
         }
-
-        */
 
     }
 }
