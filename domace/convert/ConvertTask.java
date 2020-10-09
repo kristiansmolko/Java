@@ -18,7 +18,7 @@ public class ConvertTask extends Convert{
         System.out.print("Sustava: ");
         int n = sc.nextInt();
 
-        while(n!=2 || n!=8 || n!=16) {
+        while(true) {
             if (n == 2 || n == 8 || n == 16) {
                 break;
             }
