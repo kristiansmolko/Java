@@ -53,5 +53,6 @@ public class Convert {
             dec /= 16;
         }
         System.out.println("\033[36mHexadecimal number: " + hex + "\033[0m");
+
     }
 }
