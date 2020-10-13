@@ -13,10 +13,7 @@ public class WhileLoop {
             System.out.print("Zadaj cislo: ");
             int num = sc.nextInt();
             sum -= -num;
-            if (lastNum == num){
-                break;
-            }
-            else if (num == 0){
+            if (lastNum == num || num == 0){
                 break;
             }
             else{
