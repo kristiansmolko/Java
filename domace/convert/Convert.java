@@ -30,6 +30,7 @@ public class Convert {
         String hex = "";
         while (dec != 0){
             int z = dec%16;
+            /*
             if (z<=9){
                 hex = "" + z + "" + hex;
             }
@@ -50,6 +51,17 @@ public class Convert {
             }
             else
                 hex = "F" + hex;
+
+             */
+            switch(z){
+                case 10: hex = "A" + hex; break;
+                case 11: hex = "B" + hex; break;
+                case 12: hex = "C" + hex; break;
+                case 13: hex = "D" + hex; break;
+                case 14: hex = "E" + hex; break;
+                case 15: hex = "F" + hex; break;
+                default: hex = "" + z + "" + hex; break;
+            }
             dec /= 16;
         }
         System.out.println("\033[36mHexadecimal number: " + hex + "\033[0m");
