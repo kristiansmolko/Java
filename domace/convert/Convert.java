@@ -167,6 +167,51 @@ public class Convert {
 
     }
 
+    public boolean isHexadecimalNumber(String value){
+        boolean hex = false;
+        value = value.toUpperCase();
+        for (int i = 0; i < value.length(); i++){
+            char z = value.charAt(i);
+            if (z<=57 && z>=49)
+                hex = true;
+            else if(z=='A' || z=='B' || z=='C' || z=='D' || z=='E' || z=='F')
+                hex = true;
+            else {
+                hex = false;
+                break;
+            }
+        }
+        return hex;
+    }
+
+    public boolean isBinaryNumber(String value){
+        boolean binary = false;
+        for (int i = 0; i < value.length(); i++){
+            char z = value.charAt(i);
+            if (z=='1' || z=='0')
+                binary = true;
+            else {
+                binary = false;
+                break;
+            }
+        }
+        return binary;
+    }
+
+    public boolean isOctalNumber(String value){
+        boolean oct = false;
+        for (int i = 0; i < value.length(); i++){
+            char z = value.charAt(i);
+            if (z<=55 && z>=49){
+                oct = true;
+            }
+            else{
+                oct = false;
+                break;
+            }
+        }
+        return oct;
+    }
 
 
 }

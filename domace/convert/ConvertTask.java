@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ConvertTask extends Convert{
     public static void main(String[] args) {
-
+/*
         Scanner sc = new Scanner(System.in);
         System.out.print("Input decimal number: ");
         int dec = sc.nextInt();
@@ -36,6 +36,7 @@ public class ConvertTask extends Convert{
             cv.convertToHexadecimal(dec);
         }
 
+ */
         /*
         if(n==2){
                 long bin = 0;
@@ -82,6 +83,10 @@ public class ConvertTask extends Convert{
 
          */
 
+        Convert cv = new Convert();
+        System.out.println(cv.isHexadecimalNumber("1AF"));
+        System.out.println(cv.isBinaryNumber("100101"));
+        System.out.println(cv.isOctalNumber("667452"));
 
 
     }
