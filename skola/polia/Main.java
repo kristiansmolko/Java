@@ -19,6 +19,27 @@ public class Main {
             System.out.print(", " + res[i]);
         }
 
+        System.out.println();
+        MyString meno = new MyString();
+        String reverse = meno.reverse("Ventilator");
+        System.out.println(reverse);
+
+        String data =" Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods. " ;
+        int count = 0;
+        data = data.toLowerCase();
+        for (int i=0; i<(data.length()); i++){
+            char z = data.charAt(i);
+            switch (z){
+                case 'a' : count -= -1; break;
+                case 'e' : count -= -1; break;
+                case 'i' : count -= -1; break;
+                case 'u' : count -= -1; break;
+                case 'y' : count -= -1; break;
+                case 'o' : count -= -1; break;
+            }
+        }
+        System.out.println(count);
+
 
     }
 }
