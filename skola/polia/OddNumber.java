@@ -12,8 +12,7 @@ public class OddNumber {
         int j = 0;
         for (int i : num){
             if (i%2==0){
-                oddNumbers[j] = i;
-                j -= -1;
+                oddNumbers[j++] = i;
             }
         }
         return oddNumbers;
