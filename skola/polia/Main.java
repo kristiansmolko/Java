@@ -40,6 +40,14 @@ public class Main {
         }
         System.out.println(count);
 
+        int[] numbers = new int[] {2, 5, 7, 8, 9, 11, 12};
+        OddNumber odds = new OddNumber();
+        int [] oddNumbers = odds.getOddNumbers(numbers);
+        for (int i : oddNumbers){
+            System.out.print(i + ", ");
+        }
+
+
 
     }
 }
