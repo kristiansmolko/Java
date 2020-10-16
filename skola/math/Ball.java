@@ -1,9 +1,15 @@
 package skola.math;
 
+import java.util.Scanner;
+
 public class Ball {
     public static void main(String[] args) {
         Ball ball = new Ball();
-        System.out.println(ball.countImpact(200, 0.9));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter height and koeficient:");
+        int cm = sc.nextInt();
+        double kO = sc.nextDouble();
+        System.out.println(ball.countImpact(cm, kO));
 
     }
 
