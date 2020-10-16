@@ -1,10 +1,13 @@
 package skola.math;
 
+import java.util.Scanner;
+
 public class Division {
     public static void main(String[] args) {
-
-        int c = 62;
-        int m = 93;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input numbers you want to divide:");
+        int c = sc.nextInt();
+        int m = sc.nextInt();
         int i = 2;
         do{
             if (c%i==0 && m%i==0){
