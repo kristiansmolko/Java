@@ -12,10 +12,7 @@ public class Division {
                 m /= i;
                 continue;
             }
-            if (i>=3)
-                i -= -2;
-            else
-                i -= -1;
+            i = (i>=3)?(i-=-2):(i-=-1); //ternarny operator
 
         }while(i<=c && i<m);
         System.out.println(c + " " + m);
