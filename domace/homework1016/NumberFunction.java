@@ -4,8 +4,8 @@ public class NumberFunction {
     public static void main(String[] args) {
 
         String text = "8X75Y2";
-        int x = 1;
-        int y = 1;
+        int x = 0;
+        int y = 0;
         while (x <= 9) {
             int num = 0;
             for (int j = 0; j < text.length(); j++) {
