@@ -1,4 +1,4 @@
-package domace;
+package extra;
 
 public class ExtraHomework {
     public static void main(String[] args) {
