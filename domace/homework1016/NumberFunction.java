@@ -20,19 +20,19 @@ public class NumberFunction {
                     num -= -(y)* (int) Math.pow(10, (text.length()-j-1));
                 }
             }
+            y -= -1;
             if (num%91==0){
                 System.out.println(num);
             }
-            if (y==9){
+            if (y>9){
                 y = 0;
                 x -= -1;
             }
-            y -= -1;
         }
 
 
         //SUM ZLOMKOV
-
+/*
         double myNum = 0;
         double sum = 0;
         for (int i = 1; i<=100; i++){
@@ -65,5 +65,7 @@ public class NumberFunction {
         for (int j : keno){
             System.out.print(j + " ");
         }
+
+ */
     }
 }
