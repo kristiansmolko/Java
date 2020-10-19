@@ -15,5 +15,13 @@ public class StringFunction {
             System.out.println();
             i -= -1;
         }
+
+        /* //2. solution
+        for (i=0; i<text.length(); i++){
+            String myString = text.substring(i);
+            System.out.println(myString);
+        }
+
+         */
     }
 }
