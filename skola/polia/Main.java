@@ -1,7 +1,10 @@
 package skola.polia;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        /*
         int a = 1;
         int b = 1;
         int c= 0;
@@ -39,7 +42,15 @@ public class Main {
             }
         }
         System.out.println(count);
+*/
 
+        String r = "kosice2021";
+        char[] pole = r.toCharArray();
+        for (int i = 0; i<pole.length; i++){
+            pole[i] = (char) (pole[i]+5);
+        }
+        String newR = String.valueOf(pole);
+        System.out.println(newR);
 
 
 
