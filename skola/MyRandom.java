@@ -61,5 +61,6 @@ public class MyRandom {
         }
 
         System.out.println("You have made it! You scored " + right + " / 10. So you have " + right*10 + "%");
+
     }
 }
