@@ -32,7 +32,7 @@ public class NumberFunction {
 
 
         //SUM ZLOMKOV
-/*
+
         double myNum = 0;
         double sum = 0;
         for (int i = 1; i<=100; i++){
@@ -65,7 +65,5 @@ public class NumberFunction {
         for (int j : keno){
             System.out.print(j + " ");
         }
-
- */
     }
 }
