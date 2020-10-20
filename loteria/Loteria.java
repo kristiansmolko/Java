@@ -11,7 +11,9 @@ public class Loteria {
         //1 zadavanie
         loteria.inputNum();
         //2 zrebovanie
+        loteria.generate();
         //3 overovanie
+        loteria.checking();
 
 
 
@@ -48,13 +50,45 @@ public class Loteria {
         }
         return true;
     }
-/*
+
     public void generate(){
         int i = 0;
-        for (i = 0; i < 10; i++){
+        boolean is = false;
+        int count = 0;
+        while (i < 10){
+            int num = (int) (Math.random()*19+1);
+            for (int j = 0; j < 10; j++){
+                if (zreb[j] == num) {
+                    is = true;
+                    break;
+                }
+                else
+                    is = false;
 
+            }
+            if (is == false){
+                zreb[i] = num;
+                count -= -1;
+                i++;
+            }
         }
+        /* //pre zistenie, ci to funguje
+        for (i = 0; i < 10; i++){
+            System.out.print(zreb[i] + " ");
+        }
+         */
     }
 
- */
+    public void checking(){
+        int right = 0;
+        for (int i = 0; i < guess.length; i++){
+            for (int j = 0; j < zreb.length; j++){
+                if (guess[i] == zreb[j])
+                    right -= -1;
+            }
+        }
+        System.out.println("\033[34mYou have " + right + " right answers!\033[0m");
+    }
+
+
 }
