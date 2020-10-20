@@ -102,7 +102,6 @@ public class Loteria {
 
     public void generate(){
         int i = 0;
-        boolean is = false;
         while (i < zreb.length){
             int num = (int) (Math.random()*(MAX_VALUE)+1);
             if(checkArrayZreb(i, num)){
