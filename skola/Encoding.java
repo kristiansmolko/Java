@@ -51,15 +51,15 @@ public class Encoding {
         for (int i = 0; i<text.length(); i++){
             char z = text.charAt(i);
             if (z>='A' && z<='Z'){
-                countBig -= -1;
+                countBig -= -1; // countBig += 1;
             }
             if (z>='a' && z<='z'){
-                countSmall -= -1;
+                countSmall -= -1; // countSmall += 1;
             }
             if (z>='0' && z<='9'){
                 countDigits -= -1;
             }
-            if (z==' '){
+            if (z==' '){  // if (z==32)
                 countSpace -= -1;
             }
             if (z=='.' || z=='!' || z=='?'){
@@ -67,7 +67,7 @@ public class Encoding {
             }
         }
         System.out.println("Number of small letters: \033[32m" + countSmall + "\033[0m");
-        System.out.println("Number of big letters: \033[31m" + countBig + "\033[0m");
+        System.out.println("Number of capital letters: \033[31m" + countBig + "\033[0m");
         System.out.println("Number of digits: \033[33m" + countDigits + "\033[0m");
         if (countSpace==0){
             System.out.println("Number of words: \033[35m1\033[0m");
