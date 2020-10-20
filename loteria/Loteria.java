@@ -1,5 +1,6 @@
 package loteria;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Loteria {
@@ -51,27 +52,27 @@ public class Loteria {
         return true;
     }
 
+    public boolean checkArrayZreb(int i, int in){
+        if (i==0)
+            return true;
+        for (int j = 0; j<i; j++){
+            if (zreb[j]==in)
+                return false;
+        }
+        return true;
+    }
+
     public void generate(){
         int i = 0;
         boolean is = false;
-        int count = 0;
         while (i < 10){
-            int num = (int) (Math.random()*19+1);
-            for (int j = 0; j < 10; j++){
-                if (zreb[j] == num) {
-                    is = true;
-                    break;
-                }
-                else
-                    is = false;
-
-            }
-            if (is == false){
+            int num = (int) (Math.random()*20+1);
+            if(checkArrayZreb(i, num)){
                 zreb[i] = num;
-                count -= -1;
                 i++;
             }
         }
+        Arrays.sort(zreb); //aby sme mali sortnute
         /* //pre zistenie, ci to funguje
         for (i = 0; i < 10; i++){
             System.out.print(zreb[i] + " ");
