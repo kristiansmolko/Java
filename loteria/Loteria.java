@@ -4,8 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Loteria {
-    private int[] guess = new int[5];
-    private int[] zreb = new int[10];
+    private final int TIP_LENGTH = 5;
+    private final int ZREB_LENGTH = 10;
+    private final int MAX_VALUE = 13;
+    private int[] guess = new int[TIP_LENGTH];
+    private int[] zreb = new int[ZREB_LENGTH];
 
     public static void main(String[] args) {
         Loteria loteria = new Loteria();
@@ -25,10 +28,10 @@ public class Loteria {
         int i = 0;
         int in;
         Scanner sc = new Scanner(System.in);
-        while(i<5){
+        while(i<guess.length){
             System.out.print("Enter " + (i+1) + ". number: ");
             in = sc.nextInt();
-            if (in > 0 && in < 21 && checkArray(i, in)){
+            if (in > 0 && in <= MAX_VALUE && checkArray(i, in)){
                 guess[i] = in;
                 i++;
             }
@@ -36,7 +39,7 @@ public class Loteria {
                 System.out.println("\033[31mWrong input! Try again.\033[00m");
         }
         System.out.println("Your tips: ");
-        for (i = 0; i < 5; i++){
+        for (i = 0; i < guess.length; i++){
             System.out.print((i+1) + ". tip: " + guess[i]);
             System.out.println();
         }
@@ -65,8 +68,8 @@ public class Loteria {
     public void generate(){
         int i = 0;
         boolean is = false;
-        while (i < 10){
-            int num = (int) (Math.random()*20+1);
+        while (i < zreb.length){
+            int num = (int) (Math.random()*(MAX_VALUE)+1);
             if(checkArrayZreb(i, num)){
                 zreb[i] = num;
                 i++;
