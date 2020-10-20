@@ -38,6 +38,9 @@ public class Loteria {
         do{
             System.out.println("How much do you want to pay?");
             insert = sc.nextInt();
+            if (insert<=0){
+                System.out.println("\033[31mWrong price, please try again\033[0m");
+            }
         }
         while (insert <= 0);
         return insert;
@@ -49,7 +52,7 @@ public class Loteria {
         Scanner sc = new Scanner(System.in);
         System.out.println("Do you want to write your numbers? \033[31m(Yes/No)\033[0m");
         String answer = sc.nextLine();
-        if(answer.equals("No")){
+        if(answer.equals("No") || answer.equals("no")){
             while(i < guess.length) {
                 int ourGuess = (int) (Math.random() * MAX_VALUE + 1);
                 if (checkArray(i, ourGuess)){
@@ -117,9 +120,9 @@ public class Loteria {
 
     public int checking(){
         int right = 0;
-        for (int i = 0; i < guess.length; i++){
-            for (int j = 0; j < zreb.length; j++){
-                if (guess[i] == zreb[j])
+        for (int k : guess) {
+            for (int j = 0; j < zreb.length; j++) {
+                if (k == zreb[j])
                     right -= -1;
             }
         }
@@ -127,16 +130,14 @@ public class Loteria {
     }
 
     public void win(int right, double insert){
-        double win = 0;
-        switch(right){
-            case 0:
-            case 1:
-                win = 0; break;
-            case 2: win = insert*2; break;
-            case 3: win = insert*15; break;
-            case 4: win = insert*500; break;
-            case 5: win = insert*10000; break;
-        }
+        double win = switch (right) {
+            case 0, 1 -> 0;
+            case 2 -> insert * 2;
+            case 3 -> insert * 15;
+            case 4 -> insert * 500;
+            case 5 -> insert * 10000;
+            default -> 0;
+        };
         System.out.println("You have won: \033[31m" + (int)win + "$!\033[0m" );
     }
 
