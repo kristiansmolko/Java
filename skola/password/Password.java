@@ -63,7 +63,6 @@ public class Password {
             i++;
             pass += z;
         }
-
         return pass;
     }
 }
