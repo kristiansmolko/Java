@@ -42,7 +42,7 @@ public class Password {
         int countBig = 0;
         int countDigits = 0;
         while(i<10){
-            int j = rnd.nextInt(2)+1;
+            int j = rnd.nextInt(3);
             char z = 0;
             switch(j){
                 case 0: z = (char) (rnd.nextInt(9)+48); countDigits -= -1; break;
@@ -57,7 +57,7 @@ public class Password {
                     z = (char) (rnd.nextInt(26)+97);
                 }
                 else if (countDigits == 0){
-                    z = (char) (rnd.nextInt(9)+48);
+                    z = (char) (rnd.nextInt(10)+48);
                 }
             }
             i++;
