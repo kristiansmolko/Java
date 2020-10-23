@@ -4,6 +4,7 @@ public class Table {
     private int[][] arr = new int[][]{ {2,5,8,0},{5,1,7,9},{-9,1,8,14}};
 
     public static void main(String[] args) {
+        int[][] poleXX= new int[][]{ {2,5,8,0},{3,1,7,9},{-9,1,8,14}};
         Table t = new Table();
         int value = t.min();
         System.out.println("Minimum is: " + value);
@@ -13,6 +14,8 @@ public class Table {
         System.out.println("Average is: " + avg);
         value = t.sumUnderDiagonale();
         System.out.println("Summary is: " + value);
+        int[][] newPole = transponovanaMatica(poleXX);
+        t.print(newPole);
 
     }
 
@@ -57,5 +60,27 @@ public class Table {
             }
         }
         return sum;
+    }
+
+    //private int[][] arr = new int[][]{ {2,5,8,0},{5,1,7,9},{-9,1,8,14}};
+    public static int[][] transponovanaMatica(int[][] pole){
+        int row = pole.length;
+        int col = pole[0].length;
+        int[][] r = new int[col][row];
+        for (int i = 0; i < col; i++){
+            for (int j = 0; j < row; j++){
+                r[i][j] = pole[j][i];
+            }
+        }
+        return r;
+    }
+
+    public void print(int[][] p){
+        for (int i = 0; i < p.length; i++){
+            for (int j = 0; j < p[0].length; j++){
+                System.out.print(p[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
