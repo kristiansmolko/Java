@@ -126,7 +126,7 @@ public class Table {
     public static int thirdOption(int num){
         Random rnd = new Random();
         if (num == 0){
-            num = (int) (rnd.nextInt(89)+10);
+            num = (int) (rnd.nextInt(90)+10);
         }
         return num;
     }
