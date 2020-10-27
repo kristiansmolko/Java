@@ -20,8 +20,8 @@ public class TicTacToeX {
         Scanner sc = new Scanner(System.in);
         int turn = 1;
         player = 1;
+        print();
         while (turn <= 25 && isWinner()==0){
-            print();
             System.out.println(player + " player, choose number");
             int choice = sc.nextInt();
             if (choice<1 || choice>25){
@@ -50,6 +50,7 @@ public class TicTacToeX {
                     r -= -1;
                 }
             }
+            print();
             isWinner();
             if(isWinner()!=0)
                 System.out.println("Winner is \033[31m" + isWinner() + "\033[0m. player!");
@@ -171,7 +172,7 @@ public class TicTacToeX {
 
 
     private void print() {
-        System.out.println("\033[32m-------\033[0m");
+        System.out.println("\033[32m+-----+\033[0m");
         for (int i = 0; i < 5; i++) {
             System.out.print("\033[32m|\033[0m");
             for (int j = 0; j < 5; j++) {
@@ -187,7 +188,7 @@ public class TicTacToeX {
             System.out.print("\033[32m|\033[0m");
             System.out.println();
         }
-        System.out.println("\033[32m-------\033[0m");
+        System.out.println("\033[32m+-----+\033[0m");
     }
 
     private void initArray() {
