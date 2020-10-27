@@ -30,9 +30,6 @@ public class TicTacToeX {
             }
             int r = 0;
             for (int i = 0; i < 5; i++){
-                if (player > 3){
-                    player = 1;
-                }
                 for (int j = 0; j < 5; j++){
                     if (choice-1 == r){
                         if (0 == pole[i][j]){
@@ -48,6 +45,9 @@ public class TicTacToeX {
 
                     }
                     r -= -1;
+                }
+                if (player > 3){
+                    player = 1;
                 }
             }
             print();
