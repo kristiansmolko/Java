@@ -14,7 +14,7 @@ public class ExceptionMain {
             System.out.print("Enter index 2: ");
             index2 = sc.nextInt();
 
-            int result =  arr[index1] / arr[index2];
+            int result = getResult(arr[index1], arr[index2]);
             System.out.println("Result: " + result);
         }
         catch(ArithmeticException ex){
@@ -31,5 +31,9 @@ public class ExceptionMain {
             System.out.println("This part of code executes always!");
         }
 
+    }
+
+    private static int getResult(int a, int b) {
+        return a/b;
     }
 }
